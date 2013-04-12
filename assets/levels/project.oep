@@ -1,0 +1,94 @@
+<project>
+	<name>Spelunk</name>
+	<settings>
+		<defaultWidth>240</defaultWidth>
+		<defaultHeight>120</defaultHeight>
+		<minWidth>208</minWidth>
+		<minHeight>120</minHeight>
+		<maxWidth>2100</maxWidth>
+		<maxHeight>1200</maxHeight>
+		<workingDirectory>../gfx</workingDirectory>
+	</settings>
+	<values>
+		<string name="title" default="new area" maxChars="12" />
+		<string name="background" default="cave" maxChars="12" />
+	</values>
+	<tilesets>
+		<tileset name="tiles" image="tilesets/cave.png" tileWidth="8" tileHeight="8" paletteScale="3" />
+	</tilesets>
+	<objects>
+		<object name="player" image="player/boy_white.png" width="8" height="8" imageWidth="8" imageHeight="8" limit="1" />
+		<object name="savePoint" image="save_point.png" imageOffsetX="16" width="8" height="8" imageWidth="8" imageHeight="8" />
+		<object name="exit" image="tilesets/cave.png" width="8" height="8" imageWidth="8" imageHeight="8" resizableX="true" resizableY="true">
+			<values>
+				<string name="destination" />
+			</values>
+		</object>
+		<folder name="enemies">
+			<object name="purpleSlime" image="enemies/slime.png" width="8" height="8" imageWidth="8" imageHeight="8" imageOffsetX="16" />
+			<object name="greenSlime" image="enemies/slime.png" width="8" height="8" imageWidth="8" imageHeight="8" imageOffsetX="16" imageOffsetY="8" />
+			<object name="blueSlime" image="enemies/slime.png" width="8" height="8" imageWidth="8" imageHeight="8" imageOffsetX="16" imageOffsetY="16" />
+			<object name="pinkSlime" image="enemies/slime.png" width="8" height="8" imageWidth="8" imageHeight="8" imageOffsetX="16" imageOffsetY="24" />
+			<object name="greenSnake" image="enemies/snake.png" width="8" height="8" imageWidth="8" imageHeight="8" />
+			<object name="brownSnake" image="enemies/snake.png" width="8" height="8" imageWidth="8" imageHeight="8" imageOffsetY="8" />
+			<object name="blackSnake" image="enemies/snake.png" width="8" height="8" imageWidth="8" imageHeight="8" imageOffsetY="16" />
+			<object name="yellowSnake" image="enemies/snake.png" width="8" height="8" imageWidth="8" imageHeight="8" imageOffsetY="24" />
+			<object name="rat" image="enemies/rat.png" width="8" height="8" imageWidth="8" imageHeight="8" />
+			<object name="bat" image="enemies/bat.png" width="8" height="8" imageWidth="8" imageHeight="8" imageOffsetX="16" />
+			<object name="skull" image="enemies/ghosts.png" width="8" height="8" imageWidth="8" imageHeight="8" />
+			<object name="ghost" image="enemies/ghosts.png" width="8" height="8" imageWidth="8" imageHeight="8" imageOffsetX="16" />
+			<object name="ghoul" image="enemies/ghosts.png" width="8" height="8" imageWidth="8" imageHeight="8"imageOffsetY="8" />
+			<object name="spectre" image="enemies/ghosts.png" width="8" height="8" imageWidth="8" imageHeight="8" imageOffsetX="16" imageOffsetY="8" />
+			<object name="spider" image="enemies/spider.png" width="8" height="8" imageWidth="8" imageHeight="8" />
+			<object name="wolf" image="enemies/wolf.png" width="16" height="8" imageWidth="16" imageHeight="8" />
+			<object name="frog" image="enemies/frog.png" width="8" height="8" imageWidth="8" imageHeight="8" imageOffsetX="3" />
+			<object name="zombie" image="enemies/zombie.png" width="8" height="8" imageWidth="8" imageHeight="8" imageOffsetX="40" />
+			<object name="spikes" image="enemies/spikes.png" width="8" height="8" imageWidth="8" imageHeight="8" imageOffsetX="24" resizableX="true" tile="true" />
+			<folder name="bosses">
+				<object name="slimeBoss" image="enemies/boss/slime.png" width="32" height="32" imageWidth="32" imageHeight="32" imageOffsetY="32" />
+			</folder>
+		</folder>
+		<folder name="pickups">
+			<folder name="keys">
+				<object name="blueKey" image="items/pickups.png" imageOffsetX="40" imageOffsetY="56" width="8" height="8" imageWidth="8" imageHeight="8" />
+				<object name="purpleKey" image="items/pickups.png" imageOffsetX="40" imageOffsetY="64" width="8" height="8" imageWidth="8" imageHeight="8" />
+				<object name="redKey" image="items/pickups.png" imageOffsetX="40" imageOffsetY="72" width="8" height="8" imageWidth="8" imageHeight="8" />
+				<object name="yellowKey" image="items/pickups.png" imageOffsetX="40" imageOffsetY="80" width="8" height="8" imageWidth="8" imageHeight="8" />
+				<object name="greenKey" image="items/pickups.png" imageOffsetX="40" imageOffsetY="88" width="8" height="8" imageWidth="8" imageHeight="8" />
+				<object name="orangeKey" image="items/pickups.png" imageOffsetX="40" imageOffsetY="96" width="8" height="8" imageWidth="8" imageHeight="8" />
+			</folder>
+			<folder name="orbs">
+				<object name="blueOrb" image="items/pickups.png" imageOffsetX="24" imageOffsetY="40" width="8" height="8" imageWidth="8" imageHeight="8" />
+				<object name="purpleOrb" image="items/pickups.png" imageOffsetX="0" imageOffsetY="48" width="8" height="8" imageWidth="8" imageHeight="8" />
+				<object name="redOrb" image="items/pickups.png" imageOffsetX="0" imageOffsetY="40" width="8" height="8" imageWidth="8" imageHeight="8" />
+				<object name="yellowOrb" image="items/pickups.png" imageOffsetX="0" imageOffsetY="32" width="8" height="8" imageWidth="8" imageHeight="8" />
+				<object name="greenOrb" image="items/pickups.png" imageOffsetX="24" imageOffsetY="32" width="8" height="8" imageWidth="8" imageHeight="8" />
+				<object name="orangeOrb" image="items/pickups.png" imageOffsetX="24" imageOffsetY="48" width="8" height="8" imageWidth="8" imageHeight="8" />
+			</folder>
+			<object name="whip" image="items/pickups.png" imageOffsetX="0" imageOffsetY="0" width="8" height="8" imageWidth="8" imageHeight="8" />
+			<object name="chainWhip" image="items/pickups.png" imageOffsetX="8" imageOffsetY="0" width="8" height="8" imageWidth="8" imageHeight="8" />
+			<object name="boots" image="items/pickups.png" imageOffsetX="16" imageOffsetY="0" width="8" height="8" imageWidth="8" imageHeight="8" />
+			<object name="knife" image="items/pickups.png" imageOffsetX="24" imageOffsetY="0" width="8" height="8" imageWidth="8" imageHeight="8" />
+			<object name="goldKnife" image="items/pickups.png" imageOffsetX="32" imageOffsetY="0" width="8" height="8" imageWidth="8" imageHeight="8" />
+			<object name="sword" image="items/pickups.png" imageOffsetX="40" imageOffsetY="0" width="8" height="8" imageWidth="8" imageHeight="8" />
+			<object name="axe" image="items/pickups.png" imageOffsetX="0" imageOffsetY="8" width="8" height="8" imageWidth="8" imageHeight="8" />
+			<object name="hook" image="items/pickups.png" imageOffsetX="8" imageOffsetY="8" width="8" height="8" imageWidth="8" imageHeight="8" />
+			<object name="gun" image="items/pickups.png" imageOffsetX="16" imageOffsetY="8" width="8" height="8" imageWidth="8" imageHeight="8" />
+			<object name="bullets" image="items/pickups.png" imageOffsetX="24" imageOffsetY="8" width="8" height="8" imageWidth="8" imageHeight="8" />
+			<object name="lantern" image="items/pickups.png" imageOffsetX="32" imageOffsetY="8" width="8" height="8" imageWidth="8" imageHeight="8" />
+			<object name="oil" image="items/pickups.png" imageOffsetX="40" imageOffsetY="8" width="8" height="8" imageWidth="8" imageHeight="8" />
+			<object name="goldMask" image="items/pickups.png" imageOffsetX="32" imageOffsetY="24" width="8" height="8" imageWidth="8" imageHeight="8" />
+			<object name="bronzeMask" image="items/pickups.png" imageOffsetX="40" imageOffsetY="24" width="8" height="8" imageWidth="8" imageHeight="8" />
+		</folder>
+	</objects>
+	<layers>
+		<grid name="collision" gridSize="8" drawGridSize="120" exportAsObjects="true" />
+		<grid name="ledge" gridSize="8" drawGridSize="120" exportAsObjects="true" color="#FFFF0000" />
+		<grid name="ladders" gridSize="8" drawGridSize="16" exportAsObjects="true" color="#FF00FF00" />
+		<grid name="fence" gridSize="8" drawGridSize="16" exportAsObjects="true" color="#FF0000FF" />
+		<tiles name="background" gridSize="8" exportTileSize="true" exportTileIDs="true" export="csv" />
+		<tiles name="main" gridSize="8" exportTileSize="true" exportTileIDs="true" />
+		<tiles name="foreground" gridSize="8" exportTileSize="true" exportTileIDs="true" />
+		<objects name="objects" gridSize="8" />
+	</layers>
+</project>

@@ -1,0 +1,30 @@
+<level title="Cave Tunnel" background="cave">
+  <width>240</width>
+  <height>600</height>
+  <collision>
+    <rect x="0" y="0" w="80" h="40"/>
+    <rect x="0" y="40" w="56" h="72"/>
+    <rect x="0" y="112" w="48" h="56"/>
+    <rect x="0" y="168" w="32" h="64"/>
+    <rect x="0" y="232" w="24" h="320"/>
+    <rect x="0" y="568" w="240" h="32"/>
+    <rect x="152" y="0" w="88" h="64"/>
+    <rect x="176" y="64" w="64" h="32"/>
+    <rect x="208" y="96" w="32" h="472"/>
+  </collision>
+  <main set="tiles" tileWidth="8" tileHeight="8">
+    <rect id="26" x="208" y="0" w="32" h="600"/>
+    <rect id="26" x="0" y="568" w="208" h="32"/>
+    <rect id="26" x="0" y="0" w="24" h="552"/>
+    <rect id="26" x="24" y="0" w="32" h="112"/>
+    <rect id="26" x="152" y="0" w="56" h="64"/>
+    <rect id="26" x="176" y="64" w="32" h="32"/>
+    <rect id="26" x="24" y="112" w="24" h="56"/>
+    <rect id="26" x="24" y="168" w="8" h="64"/>
+  </main>
+  <objects>
+    <exit x="80" y="0" width="72" height="8" destination="camp_hall_1"/>
+    <exit x="0" y="552" width="8" height="16" destination="cave_room_1"/>
+    <player x="128" y="560"/>
+  </objects>
+</level>
