@@ -17,6 +17,7 @@ class Knives extends Weapon
 		{
 			case "knife":		_offset = 0;
 			case "goldKnife":	_offset = 4;
+			default: _offset = 0;
 		}
 		_animating = 0;
 	}
@@ -65,7 +66,7 @@ class Knives extends Weapon
 				knifeVel.x = -knifeVelocity;
 		}
 		if (_player.crouching) knifePos.y += 2;
-		scene.add(new Knife(knifePos.x, knifePos.y, knifeVel, _offset));
+		HXP.scene.add(new Knife(knifePos.x, knifePos.y, knifeVel, _offset));
 	}
 
 	private var _offset:Int;

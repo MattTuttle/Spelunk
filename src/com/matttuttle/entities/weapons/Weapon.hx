@@ -33,13 +33,16 @@ class Weapon extends Physics
 
 	private function hitEnemy():Bool
 	{
-
-		var obj:Enemy = cast(collide("enemy", x, y), Enemy);
-		if (obj != null && obj.dead == false)
+		var e = collide("enemy", x, y);
+		if (e != null)
 		{
-			obj.hurt(attack);
-			_player.experience += obj.experience;
-			return true;
+			var obj = cast(e, Enemy);
+			if (obj != null && obj.dead == false)
+			{
+				obj.hurt(attack);
+				_player.experience += obj.experience;
+				return true;
+			}
 		}
 		return false;
 	}
