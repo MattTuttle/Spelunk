@@ -16,7 +16,7 @@ class Knife extends Weapon
 		this.x = x;
 		this.y = y;
 
-		sfx = new Hash<Sfx>();
+		sfx = new Map<String,Sfx>();
 		sfx.set("throw", new Sfx("sfx/knife/throw"));
 		sfx.set("hit", new Sfx("sfx/knife/knife_hit"));
 		sfx.set("thud", new Sfx("sfx/knife/thud"));
@@ -80,6 +80,6 @@ class Knife extends Weapon
 		}
 	}
 
-	private var sfx:Hash<Sfx>;
+	private var sfx:Map<String,Sfx>;
 
 }

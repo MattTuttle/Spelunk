@@ -95,8 +95,8 @@ class Game extends Scene
 		_room.levelBounds.camera();
 	}
 
-	public static var player(getPlayer, null):Player;
-	private static function getPlayer():Player { return _player; }
+	public static var player(get, null):Player;
+	private static function get_player():Player { return _player; }
 
 	private var _room:Room;
 	private static var _player:Player;

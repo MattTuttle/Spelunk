@@ -20,8 +20,8 @@ class Weapon extends Physics
 		type = "weapon";
 	}
 
-	public var isUsing(getUsing, null):Bool;
-	private function getUsing():Bool { return false; }
+	public var isUsing(get, null):Bool;
+	private function get_isUsing():Bool { return false; }
 
 	public function use(direction:Direction) { }
 

@@ -22,7 +22,7 @@ class Knives extends Weapon
 		_animating = 0;
 	}
 
-	private override function getUsing():Bool
+	private override function get_isUsing():Bool
 	{
 		if (_animating < 0)
 			return false;

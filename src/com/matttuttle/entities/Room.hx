@@ -277,7 +277,7 @@ class Room extends Entity
 	private function getRoom(id:String):String
 	{
 		mapID = id;
-		return nme.Assets.getText("levels/" + id + ".oel");
+		return openfl.Assets.getText("levels/" + id + ".oel");
 	}
 
 	private var _data:Fast;
@@ -286,6 +286,6 @@ class Room extends Entity
 	private var _entities:Array<Entity>;
 	private var _exits:Array<Exit>;
 
-	private static var backgrounds:Hash<Image> = new Hash<Image>();
+	private static var backgrounds:Map<String,Image> = new Map<String,Image>();
 
 }
