@@ -33,7 +33,7 @@ class Player extends Character
 	{
 		super(x, y);
 
-		sfx = new Hash<Sfx>();
+		sfx = new Map<String,Sfx>();
 		sfx.set("jump", new Sfx(#if flash "sfx/player/jump.mp3" #else "sfx/player/jump.wav" #end));
 		sfx.set("levelUp", new Sfx(#if flash "sfx/player/level_up.mp3" #else "sfx/player/level_up.wav" #end));
 		sfx.set("death", new Sfx(#if flash "sfx/player/death.mp3" #else "sfx/player/death.wav" #end));
@@ -81,8 +81,8 @@ class Player extends Character
 		maxJumps = 1;
 	}
 
-	public var weapon(getWeapon, null):Weapon;
-	private function getWeapon():Weapon { return _weapons[_weaponIndex]; }
+	public var weapon(get, null):Weapon;
+	private function get_weapon():Weapon { return _weapons[_weaponIndex]; }
 
 	public function addWeapon(newWeapon:Weapon)
 	{
@@ -370,7 +370,7 @@ class Player extends Character
 	private var _weapons:Array<Weapon>;
 	private var _weaponIndex:Int;
 
-	private var sfx:Hash<Sfx>;
+	private var sfx:Map<String,Sfx>;
 
 	private static inline var kMoveSpeed:Float = 60;
 	private static inline var kJumpForce:Float = 110;

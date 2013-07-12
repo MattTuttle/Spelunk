@@ -15,8 +15,8 @@ class Character extends Physics
 	public var maxHealth:Int;
 
 	// Properties
-	public var flickering(getFlickering, null):Bool;
-	private function getFlickering():Bool
+	public var flickering(get, null):Bool;
+	private function get_flickering():Bool
 	{
 		if (_flickerTimer > 0)
 			return true;
