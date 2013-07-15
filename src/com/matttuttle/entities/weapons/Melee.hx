@@ -36,7 +36,7 @@ class Melee extends Weapon
 		sprite.flipped = (_player.facing == Direction.LEFT);
 	}
 	
-	private override function getUsing():Bool
+	private override function get_isUsing():Bool
 	{
 		return sprite.visible;
 	}
