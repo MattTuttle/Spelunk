@@ -1,0 +1,5 @@
+-lib haxepunk
+-cp source
+-main Main
+
+-js out/game.js
